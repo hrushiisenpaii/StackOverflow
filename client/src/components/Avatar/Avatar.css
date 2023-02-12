@@ -1,0 +1,11 @@
+.children{
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    background-color: #2463cfcb;
+    text-decoration: none;
+    cursor: pointer;
+}

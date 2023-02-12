@@ -1,0 +1,118 @@
+.auth-section{
+    display: flex;
+    min-height: 100vh;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+
+.auth-container-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.auth-container-2 form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    width: 250px;
+    background-color: rgba(223, 223, 208, 0.415);
+    box-shadow: 0px 1px 5px #00000033;
+}
+
+.auth-container-2 form input:nth-child(2){
+    padding: 10px;
+    width: calc( 93% - 10px);
+    border: solid 1px #0000003e;
+}
+
+.auth-container-2 form label:nth-child(1) h4,
+.auth-container-2 form label:nth-child(2) h4,
+.auth-container-2 form label:nth-child(3) h4
+{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.auth-btn{
+    margin-top: 10px ;
+    padding: 10px;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    border: solid 2px #2463cfc4;
+    background-color: #2463cfba;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.auth-btn:hover{
+    background-color: #2463cfc3;
+}
+
+.handle-Switch-btn{
+    margin-top: 10px ;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2463cfc4;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.handle-Switch-btn:hover{
+    color: #2463cfd0;
+    
+}
+
+span a{
+    color: #007ac6;
+    text-decoration: none;
+}
+
+.logo-icon{
+    margin-bottom: 10px;
+}
+
+.logo-icon:hover{
+    transition: 0.2s;
+    border-radius: 50px;
+    box-shadow: 1px 3px 1px #00000033;
+}
+
+.check{
+    font-size: small;
+    display: flex;
+    gap: 5px;
+}
+
+.password{
+    font-size: small;
+    
+}
+
+.password-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forgot-pass{
+    color: #007ac6;
+    font-weight: 500;
+    font-size: x-small;
+}
+
+.terms{
+    color: #666767;
+    font-size: x-small;
+}
