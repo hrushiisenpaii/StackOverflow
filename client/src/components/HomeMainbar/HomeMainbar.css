@@ -1,7 +1,12 @@
 .main-bar{
     width: calc(100% - 300px - 30px);
     float: left;
-    margin: 5px 0px;
+    margin: 0px 0px;
+}
+
+.qus-no{
+    font-size: medium;
+    font-weight: 400;
 }
 
 .main-bar-header{
@@ -22,6 +27,7 @@
     color: white;
     font-weight: 700;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .main-bar-header .ask-btn:hover{
