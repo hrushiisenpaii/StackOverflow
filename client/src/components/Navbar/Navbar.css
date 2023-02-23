@@ -1,5 +1,5 @@
 .main-nav{
-    min-height: 60px;
+    min-height: 30px;
     background-color: white;
     width: 90%;
     margin: auto;
@@ -22,14 +22,14 @@
 }
 
 .nav-logo{
-    padding: 10px 25px;
+    padding: 7px 25px;
     border-radius: 30px;
 }
 
 .nav-item{
     margin: 0px 3px;
     font-size: small;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     color: black;
     transition: 0.4s;
@@ -54,7 +54,7 @@
 .navbar form input{
     min-width: 75%;
     margin: 0%;
-    padding: 10px 20px 10px 40px;
+    padding: 8px 20px 8px 40px;
     border-radius: 20px;
     font-size: 16px;
     border: solid 2px #00000033;
@@ -87,4 +87,21 @@
 .nav-links:hover{
     border: solid 2px #2463cfda;
     background-color: rgba(103, 170, 233, 0.252);
+}
+
+.children{
+    padding: 7px 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    border: 1px solid #2463cfcc;
+    background-color: #2463cfcb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.children:hover{
+    opacity: 95%;
 }

@@ -12,16 +12,20 @@
     max-width: 100%;
     position: sticky;
     padding: 20px 0px;
-    margin: 20px 0px;
+    margin: 5px 0px;
 }
 
 .side-nav-div p{
-    font-size: medium;
+    font-size: 14px;
     padding-left: 10px;
 }
 
 .side-nav-div img{
     padding-left: 10px;
+}
+
+.main-title{
+    margin: 12px 0px 3px 0px;
 }
 
 .side-nav-links{
@@ -40,8 +44,15 @@
     border-radius: 10px 0px 0px 10px;
 }
 
+.side-nav-links-1:hover{
+    color: black;
+    background-color: rgb(225, 225, 225) ;
+    border-right: solid 3px rgb(239, 130, 54, 0.5);
+    border-radius: 10px 0px 0px 10px;
+}
+
 .active{
-    font-weight: bolder;
+    font-weight: 600;
     color: black;
     background-color: rgb(225, 225, 225);
     border-right: solid 3px #ef8236;
@@ -49,8 +60,16 @@
 }
 
 .side-nav-links p{
-    font-size: 15px;
+    font-size: 14px;
     color: black;
+}
+
+.side-nav-links .icon {
+	width: 3rem;
+	height: 3rem;
+	fill: #ccccff;
+	transition: 0.4s ease-in-out;
+    color: #ccccff;;
 }
 
 .points{

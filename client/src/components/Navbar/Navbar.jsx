@@ -1,13 +1,20 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assests/stacklogo.png'
 import search from '../../assests/searchlogo.svg'
 import Avatar from '../../components/Avatar/Avatar'
+import { useSelector, useDispatch } from 'react-redux'
 import './Navbar.css'
+import { setCurrentUser } from '../../actions/currentUser'
 
 const Navbar = () => {
 
-    const User = null
+    var User = useSelector((state) => (state.currentUserReducer))
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))))
+    },[dispatch])
 
   return (
     <nav className='main-nav'>
@@ -33,7 +40,7 @@ const Navbar = () => {
 
                 <>
                 <Avatar>
-                    <Link to='/User' style={{color:'white', textDecoration:'none'}}> HP</Link>
+                    <Link to='/User' style={{color:'white', textDecoration:'none'}}>{User.result.name.charAt(0).toUpperCase()}</Link>
                 </Avatar>
                 <button className='nav-item  nav-links'>Log out</button>
                 </>

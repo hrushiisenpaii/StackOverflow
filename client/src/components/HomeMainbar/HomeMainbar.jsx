@@ -2,25 +2,14 @@ import React from 'react'
 import './HomeMainbar.css'
 import { useNavigate, useLocation } from 'react-router-dom'
 import QuestionList from './QuestionList'
+import { useSelector } from 'react-redux'
 
 const HomeMainbar = () => {
-
-var questionList = [
-  {
-    id: 1,
-    votes: 5, 
-    noOfAnswers: 5,
-    questionTitle: "What is a function?",
-    questionBody: "It meant to be",
-    questionTags: ["Java", "Nodejs", "Python", "C", ],
-    userPosted: "Hrushii",
-    askedOn: "Jan 1"
-  }
-]
 
   const user = 1
   const location = useLocation()
   const Navigate = useNavigate()
+
   const checkAuth = () => {
       if(user === null){
         alert("Log-in or Sign-up to ask questions!")
@@ -30,6 +19,8 @@ var questionList = [
         Navigate('/AskQuestion')
       }
   }
+
+  const questionList = useSelector(state => state.questionReducer)
 
   return (
     <div className='main-bar'>
@@ -44,11 +35,11 @@ var questionList = [
         
         <div>
           {
-            questionList === null ?
+            questionList.data === null ?
             <h1>Loading...</h1> :
             <>
-              <p className='qus-no'> {questionList.length} Questions </p>
-              <QuestionList questionList={questionList} />
+              <p className='qus-no'> {questionList.data.length} Questions </p>
+              <QuestionList questionList={questionList.data} />
             </>
           }
         </div>

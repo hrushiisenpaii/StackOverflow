@@ -5,7 +5,7 @@ const Questions = ({question}) => {
   return (
     <div className='display-question-container'>
         <div className='display-votes-ans'>
-            <p> { question.votes } </p>
+            <p> { question.upVotes - question.downVotes } </p>
             <p>votes</p>
         </div>
         <div className='display-votes-ans'>
@@ -13,7 +13,7 @@ const Questions = ({question}) => {
             <p>answers</p>
         </div>
         <div className='display-question-details'>
-            <Link to={`/Question/${question.id}`} className='question-title-link'>
+            <Link to={`/Question/${question._id}`} className='question-title-link'>
                 {question.questionTitle}
             </Link>
             <div className='display-tags-time'>

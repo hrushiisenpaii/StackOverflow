@@ -2,13 +2,34 @@ import React, { useState } from 'react'
 import './Auth.css'
 import icon from '../../assests/loginicon.png'
 import AboutAuth from './AboutAuth'
+import { useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom";
+import { signup, login } from '../../actions/auth.js'
 
 const Auth = () => {
 
   const [ IsSignup, SetIsSignup ] = useState(false)
-
+  const [ name, setName] = useState('')
+  const [ email, setEmail] = useState('')
+  const [ password, setPassword] = useState('')
+  
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  
   const handleSwitch = () => {
     SetIsSignup(!IsSignup)
+  }
+
+  const handelSubmit = (e) => {
+    e.preventDefault()
+    if(IsSignup){
+      if(!name){
+          alert("Enter a name to continue")
+      }
+      dispatch(signup({ name, email, password }, navigate))
+    }else{
+      dispatch(login({ email, password }, navigate))
+    }
   }
 
   return (
@@ -28,18 +49,18 @@ const Auth = () => {
       </a>
       <div>
         { !IsSignup }
-        <form>
+        <form onSubmit={handelSubmit}>
           {
             IsSignup && (
               <label htmlFor='name'>
                 <h4>Display Name</h4>
-                <input type="text" name='name' id='name' />
+                <input type="text" name='name' id='name' onChange={(e) => {setName(e.target.value)}} />
               </label>
             )
           }
           <label htmlFor="email">
             <h4>Email</h4>
-            <input type="email" name='email' id='email' />
+            <input type="email" name='email' id='email'  onChange={(e) => {setEmail(e.target.value)}}/>
           </label>
           <label htmlFor="password">
             <div className='password-box'>
@@ -50,7 +71,7 @@ const Auth = () => {
               }
             </div>
 
-            <input type="password" name='password' id='password' />
+            <input type="password" name='password' id='password'  onChange={(e) => {setPassword(e.target.value)}}/>
             { IsSignup && 
             <p className='password'>
               Password must contain at least eight characters, including 

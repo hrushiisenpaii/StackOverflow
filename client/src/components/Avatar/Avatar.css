@@ -5,7 +5,12 @@
     font-weight: 700;
     text-align: center;
     color: white;
+    border: 1px solid #2463cfcc;
     background-color: #2463cfcb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.children:hover{
+    opacity: 95%;
 }
