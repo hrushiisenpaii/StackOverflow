@@ -16,14 +16,14 @@ const AskQuestion = () => {
     const User = useSelector((state) => (state.currentUserReducer))
 
     const handelEnter = (e) => {
-        if(e.key === 'Enter'){
-            setQuestionBody(questionBody + "\n")
+        if(e.key === 13){
+            setQuestionBody(questionBody + '\n')
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(askQuestion({questionTitle, questionBody, questionTags, userPosted: User.result.name}, navigate))
+        dispatch(askQuestion({questionTitle, questionBody, questionTags, userPosted: User.result.name, userId: User?.result?._id}, navigate))
     }
 
   return (
@@ -52,13 +52,14 @@ const AskQuestion = () => {
                     <label htmlFor="ask-ques-tags">
                         <h4>Tags for your Question</h4>
                         <p>Good tags reaches user Better.</p>
-                        <input type="text" id='ask-ques-tags' onChange={(e) => {setQuestionTags(e.target.value.split(" "))}} placeholder='e.g. (cpp java react)'/>
+                        <input type="text" id='ask-ques-tags' onChange={(e) => {setQuestionTags(e.target.value.split(" "))}} placeholder='e.g. (cpp java react) upto 4 tags.'/>
                     </label>
                 </div>
-                <input type="submit" value='Review your Question' className='review-btn' />
+                <input type="submit" value='Post your Question' className='review-btn' />
             </form>
         </div>
     </div>
+    
 
     </>      
   )

@@ -1,0 +1,139 @@
+.user-details-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .profile-bio-container{
+    border-top: 1px solid #dbd9d9;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-details .children{
+    padding: 10px 30px;
+    font-size: 40px;
+    border-radius: 50%;
+  }
+  
+  .user-name p {
+    color: #7e7e7e;
+  }
+
+  .user-name div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .edit-profile-btn {
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: solid 1px #7e7e7e;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
+    margin: 20px 0px;
+    transition: 0.3s;
+  }
+
+  .edit-profile-btn p{
+    margin: 0%;
+    font-size: 12px;
+  }
+
+  .edit-profile-btn:hover {
+    background-color: #cfe3f3;
+  }
+
+  .edit-profile-title {
+    padding: 20px 0px;
+    border-bottom: solid 1px #dbd9d9;
+  }
+
+  .edit-profile-title-2 {
+    color: grey;
+    font-weight: 400;
+  }
+
+  .edit-profile-form {
+    padding: 20px;
+    border: solid 1px #dbd9d9;
+    border-radius: 5px;
+  }
+
+  .edit-profile-form label h3 {
+    margin: 0%;
+    padding: 3px 0px;
+  }
+
+  .edit-profile-form label p {
+    margin: 0%;
+    padding: 3px 0px;
+  }
+
+  .edit-profile-form label input,
+  .edit-profile-form label textarea {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: solid 1px #dbd9d9;
+    width: 50%;
+  }
+  
+  .user-submit-btn {
+    padding: 14px 10px;
+    background-color: #0a95ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .user-submit-btn:hover {
+    background-color: #0074cc;
+  }
+  
+  .user-cancel-btn {
+    padding: 14px 10px;
+    color: #0a95ff;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .profile-link{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .user-detail-item{
+    width: calc(100% - 500px);
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 2px;
+  }
+
+  .profile-link h4{
+    margin: 0%;
+    font-size: 15px;
+  }  
+
+  .profile-link p{
+    margin: 0%;
+  }
+
+  .profile-link{
+    display: flex;
+    align-items: center;
+  }

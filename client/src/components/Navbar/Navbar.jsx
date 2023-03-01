@@ -1,20 +1,37 @@
 import React , {useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import decode from 'jwt-decode'
+import { useSelector, useDispatch } from 'react-redux'
+import { setCurrentUser } from '../../actions/currentUser'
+
+import './Navbar.css'
 import logo from '../../assests/stacklogo.png'
 import search from '../../assests/searchlogo.svg'
 import Avatar from '../../components/Avatar/Avatar'
-import { useSelector, useDispatch } from 'react-redux'
-import './Navbar.css'
-import { setCurrentUser } from '../../actions/currentUser'
 
 const Navbar = () => {
 
     var User = useSelector((state) => (state.currentUserReducer))
     const dispatch = useDispatch()
+    const Navigate = useNavigate()
 
-    useEffect(()=>{
-        dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))))
-    },[dispatch])
+    useEffect(() => {
+        const token = User?.token;
+        if (token) {
+          const decodedToken = decode(token);
+          if (decodedToken.exp * 1000 < new Date().getTime()) {
+            handleLogout();
+          }
+        }
+        dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+      }, [User?.token, dispatch]);
+
+    const handleLogout = () => {
+        dispatch({type: "LOGOUT"})
+        Navigate('/')
+        dispatch(setCurrentUser(null))
+        alert("You have been logged out..")
+    }
 
   return (
     <nav className='main-nav'>
@@ -39,10 +56,10 @@ const Navbar = () => {
                 </Link> :
 
                 <>
-                <Avatar>
-                    <Link to='/User' style={{color:'white', textDecoration:'none'}}>{User.result.name.charAt(0).toUpperCase()}</Link>
+                <Avatar className='navchild'>
+                    <Link to={`/User/${User?.result?._id}`} style={{color:'white', textDecoration:'none'}}>{User.result.name.charAt(0).toUpperCase()}</Link>
                 </Avatar>
-                <button className='nav-item  nav-links'>Log out</button>
+                <button className='nav-item  nav-links' onClick={handleLogout}>Log out</button>
                 </>
             }
 

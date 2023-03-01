@@ -89,14 +89,14 @@
     background-color: rgba(103, 170, 233, 0.252);
 }
 
-.children{
-    padding: 7px 10px;
-    border-radius: 50%;
-    font-size: 16px;
-    font-weight: 700;
+.navbar .children{
+    padding: 8px 12px ;
+    border-radius: 40%;
+    font-size: 15px;
+    font-weight: 800;
+    margin-right: 5px;
     text-align: center;
     color: white;
-    border: 1px solid #2463cfcc;
     background-color: #2463cfcb;
     text-decoration: none;
     cursor: pointer;

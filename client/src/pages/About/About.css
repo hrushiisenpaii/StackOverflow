@@ -1,0 +1,49 @@
+.home-container-2 .head{
+   margin-top: 10px;
+   font-size: 26px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+   width: calc(100% - 250px);
+}
+
+.aboutdetails-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.coursedetail-container ul li{
+    margin: 0%;
+    padding: 2px;
+    font-size: 14px;
+}
+
+.about-dev a:hover{
+    border-bottom: 1px solid #2463cfc3;
+}
+
+.links p {
+    margin: 5px;
+}
+
+.aboutdetails-container div h2{
+    margin: 0%;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-links-1{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.about-page{
+   width: calc(100% - 150px);
+}
+
+.about-dev{
+    width: calc(100% - 150px);
+}

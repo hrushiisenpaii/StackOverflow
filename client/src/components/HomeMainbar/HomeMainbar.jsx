@@ -33,10 +33,10 @@ const HomeMainbar = () => {
           </button>
         </div>
         
-        <div>
+        <div activeClass='active'>
           {
             questionList.data === null ?
-            <h1>Loading...</h1> :
+            <h1 className='loading'>Loading...</h1> :
             <>
               <p className='qus-no'> {questionList.data.length} Questions </p>
               <QuestionList questionList={questionList.data} />

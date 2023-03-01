@@ -4,12 +4,12 @@ import Navbar from '../../components/Navbar/Navbar'
 import LeftSidebar from '../../components/LeftSidebar/LeftSidebar'
 import RightSidebar from '../../components/RightSidebar/RightSidebar'
 import HomeMainbar from '../../components/HomeMainbar/HomeMainbar'
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   return (
     <div>
-    <Navbar>
-    </Navbar>
+      <Navbar/>
 
       <div className='home-container-1'>
         <LeftSidebar />
@@ -20,6 +20,8 @@ const Home = () => {
       </div>
 
       </div>
+
+      <Footer/>
     </div>
 
   )

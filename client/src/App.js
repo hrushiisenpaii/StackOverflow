@@ -4,6 +4,7 @@ import './App.css';
 import AllRoutes from './AllRoutes';
 import { fetchAllQuestions } from './actions/question';
 import { useDispatch } from 'react-redux';
+import { fetchAllUsers } from './actions/users';
 //import Navbar from './components/Navbar/Navbar'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchAllQuestions())
+    dispatch(fetchAllUsers())
   },[dispatch])
 
   return (
