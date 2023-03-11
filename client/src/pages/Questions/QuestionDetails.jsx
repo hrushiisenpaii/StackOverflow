@@ -37,7 +37,7 @@ const QuestionDetails = () => {
     }
 
     const location = useLocation()
-    const URL = 'http://localhost:3000'
+    const URL = 'https://stackoverflowhp.onrender.com'
     const handelShare = () => {
         copy(URL + location.pathname)
         alert("URL has been copied: " + URL + location.pathname)
